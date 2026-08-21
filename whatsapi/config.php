@@ -13,15 +13,17 @@ session_start();
 
 date_default_timezone_set('America/Sao_Paulo');
 
+$base_url = getenv('API_BASE_URL');
+$api_key = getenv('MASTER_API_KEY');
+
 // Defina a URL base da API do whatsmiau
-define('API_BASE_URL', 'https://whatsapi.jrtec.com.br/v1');
+define('API_BASE_URL', $base_url);
 
 // Defina a sua Chave de API
-define('MASTER_API_KEY', '7acBzr07UsAcRZ2lmtFyMJKak3Be9ijiaNUe9vUndziAO9ie');
+define('MASTER_API_KEY', $api_key);
 
-// Configurações do Banco de Dados MySQL (Preencha com os dados da Hostinger)
-define('DB_HOST', 'localhost'); // Na Hostinger, geralmente é localhost
-define('DB_NAME', 'u134815491_whatsapi'); // Substitua pelo nome do banco criado
-define('DB_USER', 'u134815491_whatsapi'); // Substitua pelo usuário do banco
-define('DB_PASS', 'CteUfzvByN1Xv4I76IQix1iFo1HumxCt'); // Substitua pela senha do banco
+$host = getenv('DB_HOST') ?: 'localhost';
+$dbname = getenv('DB_NAME') ?: 'banco_local';
+$user = getenv('DB_USER') ?: 'root';
+$pass = getenv('DB_PASS') ?: '';
 ?>

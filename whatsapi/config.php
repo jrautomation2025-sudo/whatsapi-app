@@ -1,4 +1,7 @@
 <?php
+// Oculta os warnings visuais na tela (mantém gravado apenas no log se precisar)
+ini_set('display_errors', '0');
+error_reporting(E_ALL);
 // Configura cookies de sessão para serem mais seguros
 ini_set('session.cookie_httponly', 1); // Impede acesso via JavaScript (evita roubo de sessão)
 ini_set('session.use_only_cookies', 1);

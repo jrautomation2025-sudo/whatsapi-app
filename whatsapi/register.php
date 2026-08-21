@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <hr class="border-secondary my-3">
             
             <div class="text-center">
-                <a href="/whatsapi/" class="text-decoration-none text-secondary">&larr; Voltar para a página inicial</a>
+                <a href="/" class="text-decoration-none text-secondary">&larr; Voltar para a página inicial</a>
             </div>
         </form>
     </div>

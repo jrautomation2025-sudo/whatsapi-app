@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "6303ebd1-af17-4850-a64b-93f4931c3345",
+    "name": "JR Tech Automation API",
+    "description": "Coleção de APIs para integração externa com o ecossistema JR Tech Automation. Utilize seu Token Privado no cabeçalho 'apikey'.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17928547",
+    "_collection_link": "https://go.postman.co/collection/17928547-6303ebd1-af17-4850-a64b-93f4931c3345?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Mensagens",
+      "item": [
+        {
+          "name": "Enviar Texto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{YOUR_API_KEY}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"instance\": \"{{INSTANCE_ID}}\",\n    \"type\": \"text\",\n    \"payload\": {\n        \"number\": \"558182596095\",\n        \"text\": \"Olá! Mensagem enviada via API JR Tech.\"\n    }\n}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}?action=send_message",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "query": [
+                {
+                  "key": "action",
+                  "value": "send_message"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar Imagem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{YOUR_API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"instance\": \"{{INSTANCE_ID}}\",\n    \"type\": \"image\",\n    \"payload\": {\n        \"number\": \"558182596095\",\n        \"url\": \"https://doawdgaysowvcsepaffp.supabase.co/storage/v1/object/public/videos_and_images/clientes_imagens/propaganda_jrtech.png\",\n        \"caption\": \"Legenda da Imagem\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}?action=send_message",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "query": [
+                {
+                  "key": "action",
+                  "value": "send_message"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar Documento",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{YOUR_API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"instance\": \"{{INSTANCE_ID}}\",\n    \"type\": \"document\",\n    \"payload\": {\n        \"number\": \"558182596095\",\n        \"url\": \"https://doawdgaysowvcsepaffp.supabase.co/storage/v1/object/public/videos_and_images/files/relatorio-1.pdf\",\n        \"fileName\": \"relatorio-1.pdf\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}?action=send_message",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "query": [
+                {
+                  "key": "action",
+                  "value": "send_message"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar Áudio",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{YOUR_API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"instance\": \"{{INSTANCE_ID}}\",\n    \"type\": \"audio\",\n    \"payload\": {\n        \"number\": \"5581984201425\",\n        \"url\": \"https://link-do-audio.mp3\"\n    }\n}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}?action=send_message",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "query": [
+                {
+                  "key": "action",
+                  "value": "send_message"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Ferramentas",
+      "item": [
+        {
+          "name": "Verificar WhatsApp",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{YOUR_API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"instance\": \"{{INSTANCE_ID}}\",\n    \"numbers\": [\"558182596095\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}?action=check_numbers",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "query": [
+                {
+                  "key": "action",
+                  "value": "check_numbers"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "https://whatsappi.jrtechautomation.com.br/api",
+      "type": "string"
+    },
+    {
+      "key": "YOUR_API_KEY",
+      "value": "COLE_SEU_TOKEN_AQUI",
+      "type": "string"
+    },
+    {
+      "key": "INSTANCE_ID",
+      "value": "ID_DA_SUA_INSTANCIA",
+      "type": "string"
+    }
+  ]
+}

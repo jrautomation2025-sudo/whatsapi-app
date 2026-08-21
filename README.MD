@@ -8,7 +8,7 @@ Coleção de APIs para integração externa com o ecossistema JR Tech Automation
 
 Todas as requisições devem ser feitas para a URL base e exigem autenticação via Header.
 
-*   **Base URL:** `https://whatsappi.jrtechautomation.com.br/api`
+*   **Base URL:** `https://whatsappi.jrte.com.br/`
 *   **Method:** `POST`
 *   **Header Obrigatório:**
     *   `apikey`: `SEU_TOKEN_PRIVADO_AQUI`

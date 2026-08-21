@@ -18,7 +18,6 @@ $api_key = getenv('MASTER_API_KEY');
 
 // Defina a URL base da API do whatsmiau
 define('API_BASE_URL', $base_url);
-
 // Defina a sua Chave de API
 define('MASTER_API_KEY', $api_key);
 
@@ -26,4 +25,9 @@ $host = getenv('DB_HOST') ?: 'localhost';
 $dbname = getenv('DB_NAME') ?: 'banco_local';
 $user = getenv('DB_USER') ?: 'root';
 $pass = getenv('DB_PASS') ?: '';
+
+define('DB_HOST', $host);
+define('DB_NAME', $dbname);
+define('DB_USER', $user);
+define('DB_PASS', $pass);
 ?>

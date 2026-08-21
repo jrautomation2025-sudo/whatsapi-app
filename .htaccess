@@ -1,39 +1,11 @@
-Options -Indexes
 RewriteEngine On
-RewriteBase /
 
-# --- PAGINAS HTML DA RAIZ ---
-# Remove .html e resolve internamente
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*)\.html[\s?] [NC]
-RewriteRule ^ /%1 [R=301,L]
+# Se o arquivo ou diretório não existir fisicamente...
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
 
-# --- BLOCO WHATSAPP API ---
-RewriteRule ^whatsapi/?$ whatsapi/index.php [L,NC]
-RewriteCond %{DOCUMENT_ROOT}/whatsapi/$1.php -f
-RewriteRule ^whatsapi/([^/]+)/?$ whatsapi/$1.php [L,NC]
+# E se existir um arquivo .php com esse nome...
+RewriteCond %{REQUEST_FILENAME}.php -f
 
-
-<IfModule mod_headers.c>
-    # Impede que o site seja colocado em iFrames (Previne Clickjacking)
-    Header set X-Frame-Options "SAMEORIGIN"
-
-    # Impede o navegador de tentar adivinhar o tipo de conteúdo (MIME-type sniffing)
-    Header set X-Content-Type-Options "nosniff"
-
-    # Ativa o filtro de XSS no navegador
-    Header set X-XSS-Protection "1; mode=block"
-
-    # HSTS - Força HTTPS por um ano (Cuidado: requer SSL ativo)
-    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-
-    # Política de Referência
-    Header set Referrer-Policy "no-referrer-when-downgrade"
-</IfModule>
-
-<Files "config.php">
-    Order allow,deny
-    Deny from all
-</Files>
+# Então direcione internamente para o arquivo .php
+RewriteRule ^(.*)$ $1.php [L]

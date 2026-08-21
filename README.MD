@@ -1,8 +1,3 @@
-Com base na sua coleção do Postman, preparei um `README.md` completo, profissional e pronto para você colocar no seu repositório do GitHub. Ele já documenta as rotas, a autenticação e os payloads exatos que a sua API espera.
-
-Crie um arquivo chamado **`README.md`** na raiz do seu projeto e cole o conteúdo abaixo:
-
-```markdown
 # 📱 JR Tech Automation - WhatsAPI
 
 Coleção de APIs para integração externa com o ecossistema JR Tech Automation. Esta API permite o envio automatizado de mensagens, mídias e verificação de números de WhatsApp de forma simples via requisições HTTP POST.

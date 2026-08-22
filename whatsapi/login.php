@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - JR Tech Automation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/whatsapi/jrtec.svg">
+    <link rel="icon" type="image/svg+xml" href="jrtec.svg">
     <style>
         body { background-color: #121212; display: flex; align-items: center; justify-content: center; height: 100vh; }
         .card { box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #333; width: 100%; max-width: 400px; }

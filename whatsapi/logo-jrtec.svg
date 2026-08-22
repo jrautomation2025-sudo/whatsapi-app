@@ -20,8 +20,9 @@
     </linearGradient>
   </defs>
 
-  <!-- Fundo Arredondado -->
-  <rect width="512" height="512" rx="120" fill="url(#bgGrad)" />
+  <!-- Fundo Arredondado 
+  <rect x="156" y="310" width="200" height="6" rx="3" fill="url(#accentGrad)" />
+  -->
 
   <!-- Detalhes de Circuito/Tecnologia de Fundo -->
   <circle cx="100" cy="120" r="8" fill="url(#primaryGrad)" />

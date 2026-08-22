@@ -10,6 +10,7 @@ include 'sidebar.php';
     <meta charset="UTF-8">
     <title>Dashboard - JR Tech Automation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="jrtec.svg">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root { --bg-main: #0a0b0d; --card-bg: #14171c; --accent: #00ff88; --border: #30363d; }

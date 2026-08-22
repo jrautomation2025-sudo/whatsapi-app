@@ -145,7 +145,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="jr-nav">
         <div class="jr-nav-label">Gerenciamento</div>
         <a href="/whatsapi/painel" class="jr-nav-link <?= ($current_page == '/whatsapi/painel' || $current_page == '/whatsapi/dashboard') ? 'active' : '' ?>">
-            <i class="fas fa-th-large"></i> Dashboard
+            <i class="fa-solid fa-chart-pie"></i> Dashboard
         </a>
         <a href="/whatsapi/instancias" class="jr-nav-link <?= ($current_page == '/whatsapi/instancias') ? 'active' : '' ?>">
             <i class="fas fa-link"></i> Instâncias
